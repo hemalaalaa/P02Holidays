@@ -31,23 +31,45 @@ public class HolidaysAdapter extends ArrayAdapter {
         tvDate = (TextView) rowVIew.findViewById(R.id.textView3);
         ivStar = (ImageView) rowVIew.findViewById(R.id.imageView);
         Holidays currentCode = code.get(position);
+
         tvEvent.setText(currentCode.getName());
+        tvDate.setText(currentCode.getDate());
 //
 //        if (currentCode.isStar()) {
 //            ivStar.setImageResource(R.drawable.newyear);
 //        } else {
-        if(currentCode.getDate().equals("1 Jan 2017")){
+        if(currentCode.getDate().equals("1 Jan 2018")){
 
             ivStar.setImageResource(R.drawable.newyear);
 
 
         }
-        else if(currentCode.getDate().equals("1 May 2017")){
+        else if(currentCode.getDate().equals("1 May 2018")){
 
             ivStar.setImageResource(R.drawable.labourday);
 
         }
+        else if(currentCode.getDate().equals("16-17 Feb 2018")){
 
+            ivStar.setImageResource(R.drawable.cny);
+
+        }
+
+        else if(currentCode.getDate().equals("30 March 2018")){
+
+            ivStar.setImageResource(R.drawable.goodfriday);
+
+        }
+        else if(currentCode.getDate().equals("22 Aug 2018")){
+
+            ivStar.setImageResource(R.drawable.harirayahaji);
+
+        }
+        else {
+
+            ivStar.setImageResource(R.drawable.deepavali);
+
+        }
 //        }
         return rowVIew;
     }

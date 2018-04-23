@@ -34,12 +34,16 @@ public class SecondActivity extends AppCompatActivity{
 
         lv.setAdapter(aa);
         if (year.equals("Secular")){
-            code.add(new Holidays("New Year's Day", "1 Jan 2017"));
-            code.add(new Holidays("Labour Day","1 May 2017"));
+            code.add(new Holidays("New Year's Day", "1 Jan 2018"));
+            code.add(new Holidays("Labour Day","1 May 2018"));
 
 
         }
-        else{
+        else if(year.equals("Ethnic & Religion")){
+            code.add(new Holidays("Chinese New Year", "16-17 Feb 2018"));
+            code.add(new Holidays("Good Friday","30 March 2018"));
+            code.add(new Holidays("Hari Raya Haji","22 Aug 2018"));
+            code.add(new Holidays("Deepavali","6 Nov 2018"));
 
         }
 
